@@ -9,15 +9,15 @@ async def welcome():
 
 
 @app.get('/user/admin')
-async def welcome():
+async def admin():
     return f'Вы вошли как администратор'
 
 
 @app.get('/user/{user_id}')
-async def id_paginator(user_id: int):
+async def userId(user_id: int):
     return f'Вы вошли как пользователь № {user_id}'
 
 
 @app.get('/user')
-async def id_paginator(username: str, age: int):
+async def userName(username: str, age: int):
     return f'Информация о пользователе. Имя: {username}, Возраст : {age}'
